@@ -2,14 +2,20 @@
 const navButton = document.querySelector('#ham-btn');
 
 // Main navigation functionality
-const navLinks = document.querySelector('#nav-bar');
+const navBar = document.querySelector('#nav-bar');
 
 
 
 
 // Toggle the show class on and off
 navButton.addEventListener('click', () => {
-    navButton.classList.toggle('show');
-    navLinks.classList.toggle('show');
+    const isOpen = navButton.classList.toggle('show');
+    navButton.setAttribute('aria-expanded', isOpen);
+});
+
+navButton.addEventListener('click', () => {
+    const isOpen = navButton.classList.toggle('show');
+    navButton.setAttribute('aria-expanded', isOpen);
+    navBar.classList.toggle('show');
 });
 

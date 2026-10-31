@@ -2,7 +2,7 @@
     --primary-color: #3D405B;
     --secondary-color: #E07A5F;
     --background-color: #F4F1DE;
-    --font-primary: 'Barlow' Arial, sans-serif;
+    --font-primary: 'Barlow', Arial, sans-serif;
     --font-size-base: 16px;
     --line-height-base: 1.5;
 }
@@ -10,16 +10,16 @@
 /*------------------ SITE WIDE ----------------*/
 * {
     box-sizing: border-box;
-    font-family: var(--font-primary)
+    font-family: var(--font-primary);
 }
 
 /*------------------ HEADER ----------------*/
 header {
     display: grid;
-    grid-template-columns: 24px auto 44px;
+    grid-template-columns: 48px 1fr 44px;
     padding: 5px 0 10px;
-    align-items: end;
-    border-bottom: solid, 1px #ddd;
+    align-items: center;
+    border-bottom: solid 1px #ddd;
     column-gap: 10px;
 }
 
@@ -27,15 +27,13 @@ header img {
     display: block;
     width: 100%;
     height: auto;
-    
 }
 
 header span {
     font-size: 1.2rem;
     font-weight: 600;
-    color: var(--primary-color)
+    color: var(--primary-color);
 }
-
 
 /*------------------ HAMBURGER ----------------*/
 .hamburger {
@@ -79,14 +77,8 @@ header span {
 }
 .navigation a:hover {
     background-color: var(--secondary-color);
+    color: #fff;
 }
-
-
-h1 {
-    margin-left: 10px;
-    color: var(--primary-color);
-}
-
 
 /*------------------ FOOTER ----------------*/
 footer {
@@ -112,9 +104,124 @@ footer {
 .social img {
     width: 22px;
     height: 22px;
-
 }
 .social a:hover {
     background-color: #ddd;
+}
 
+/*------------------ MAIN ----------------*/
+main {
+    padding: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0, 0.05);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.card-content img {
+    max-width: 250px; 
+    width: 100%;
+    height: auto;
+    aspect-ratio: 400 / 533; 
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/*------------------ Title Styles ----------------*/
+main h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+}
+
+.card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 5px;
+    color: var(--primary-color);
+}
+
+/* --- Filter Buttons --- */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filters button {
+    padding: 8px 18px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+}
+
+.filters button:hover {
+    background-color: #1abc9c;
+}
+
+/* --- Courses Grid Container --- */
+#courses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* --- Individual Course Card --- */
+.course-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-3px);
+}
+
+.course-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+}
+
+/* --- Completed Course Style --- */
+.course-card.completed {
+    background-color: #e2f0d9;
+    border-color: #b7e1cd;
+    color: #274e13;
+}
+
+/* --- Total Credits Text Style --- */
+#total-credits {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 1rem;
 }

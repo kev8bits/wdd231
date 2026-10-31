@@ -16,37 +16,73 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+    <!-- JS scripts -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+
 </head>
 <body>
     <header>
-        <img src="images/house.svg" alt="site logo" width="512" height="512">
-        <span>My Sample Site</span>
-        <button id="ham-btn" class="hamburger"></button>
+        <img src="images/logo.svg" alt="site logo" width="48" height="48">
+        <span>Kevin Herrera</span>
+        <button id="ham-btn" class="hamburger" aria-label="Toggle navigation" aria-expanded="false"></button>
     </header>
 
     <nav id="nav-bar" class="navigation">
         <ul>
-            <li><a href="#">News & Events</a></li>
-            <li class="current"><a href="#">Dedicated Temples</a></li>
-            <li><a href="#">Announced Temples</a></li>
+            <li class="current"><a href="#" aria-current="page">Home</a></li>
+            <li><a href="#">Chamber Of Commerce</a></li>
+            <li><a href="#">Final Project</a></li>
         </ul>
     </nav>
 
     <main>
-        <h1>Dedicated Temples</h1>
+        <h1>Home</h1>
+
+        <section class="card">
+            <h2>About Me</h2>
+            <div class="card-content">
+                <div class="card-text">
+                    <p>My name is Kevin Herrera, a 24-year-old student at BYU and a passionate software development enthusiast based in Santa Fe Capital, Argentina. Originally from Venezuela, I have a deep appreciation for Argentine culture, family, and hard work. As a dedicated member of The Church of Jesus Christ of Latter-day Saints, I find great joy in serving others and staying actively involved in my community.</p>
+                    <p>Professionally, I bring a strong background in customer service and operational problem-solving from my work as a ticket sales agent at the central bus terminal in Santa Fe (Empresa Río Uruguay). Beyond customer operations, I have hands-on experience in tech environments—including developing internal low-code web applications utilizing ToolJet and connecting databases—which has sharpened my logic, efficiency, and ability to build practical digital solutions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Student Photo</h2>
+            <div class="card-content">
+                <img src="images/profile.webp" alt="Kevin Herrera Profile photo" width="400" height="533" loading="lazy">
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Web Certificate Courses</h2>
+            <div class="filters">
+                <button id="all">ALL</button>
+                <button id="cse">CSE</button>
+                <button id="wdd">WDD</button>
+            </div>
+
+            <!-- dynamic js-generated container -->
+            <div id="courses-container" class="courses-grid"></div>
+
+            <p id="total-credits">The total credits for courses listed above is: <span id="credits-count">0</span></p>
+
+        </section>
     </main>
 
 
     <footer>
         <div class="social">
-            <a href="https://www.facebook.com/kevin.herrera.94849" target="_blank"><img src="images/facebook.svg" alt="Facebook" width="16" height="16"></a>
-            <a href="https://www.instagram.com/kev_hc/" target="_blank"><img src="images/instagram.svg" alt="instagram" width="16" height="16"></a>
-            <a href="www.linkedin.com/in/kevin-herrera-a41b052ba" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn" width="16" height="16"></a>
-            <a href="https://github.com/ZyperHex" target="_blank"><img src="images/github.svg" alt="GitHub" width="16" height="16"></a>
+            <a href="https://www.facebook.com/kevin.herrera.94849" target="_blank"><img src="images/facebook.svg" alt="Facebook Profile" width="16" height="16"></a>
+            <a href="https://www.instagram.com/kev_hc/" target="_blank"><img src="images/instagram.svg" alt="instagram Profile" width="16" height="16"></a>
+            <a href="https://www.linkedin.com/in/kevin-herrera-a41b052ba" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn Profile" width="16" height="16"></a>
+            <a href="https://github.com/kev8bits" target="_blank"><img src="images/github.svg" alt="GitHub Profile" width="16" height="16"></a>
         </div>
-        <p>&copy; 2025 Kevin Herrera</p>
-        <p>Last Modified: </p>
+        <p>&copy; <span id="currentYear"></span> | Kevin Herrera | Argentina</p>
+        <p id="lastModified"></p>
     </footer>
-    <script src="scripts/navigation.js"></script>
 </body>
 </html>

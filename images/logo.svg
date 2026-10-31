@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Gradiente de fondo del escudo -->
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    
+    <!-- Gradiente dorado para detalles y acentos -->
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+  </defs>
+
+  <!-- Círculo base con borde elegante -->
+  <circle cx="256" cy="256" r="240" fill="url(#primaryGradient)" stroke="#38BDF8" stroke-width="12" />
+  
+  <!-- Anillo decorativo exterior -->
+  <circle cx="256" cy="256" r="220" fill="none" stroke="#334155" stroke-width="3" stroke-dasharray="12 8" />
+
+  <!-- Siluetas de Edificios / Ciudad (Comercio e Industria) -->
+  <g fill="#94A3B8">
+    <!-- Edificio Izquierda -->
+    <rect x="130" y="210" width="65" height="170" rx="4" />
+    <!-- Ventanas Edificio Izquierda -->
+    <rect x="145" y="230" width="12" height="18" rx="2" fill="#0F172A" />
+    <rect x="168" y="230" width="12" height="18" rx="2" fill="#0F172A" />
+    <rect x="145" y="260" width="12" height="18" rx="2" fill="#0F172A" />
+    <rect x="168" y="260" width="12" height="18" rx="2" fill="#0F172A" />
+    <rect x="145" y="290" width="12" height="18" rx="2" fill="#0F172A" />
+    <rect x="168" y="290" width="12" height="18" rx="2" fill="#0F172A" />
+
+    <!-- Edificio Derecha -->
+    <rect x="317" y="230" width="65" height="150" rx="4" />
+    <!-- Ventanas Edificio Derecha -->
+    <rect x="332" y="250" width="12" height="18" rx="2" fill="#0F172A" />
+    <rect x="355" y="250" width="12" height="18" rx="2" fill="#0F172A" />
+    <rect x="332" y="280" width="12" height="18" rx="2" fill="#0F172A" />
+    <rect x="355" y="280" width="12" height="18" rx="2" fill="#0F172A" />
+  </g>
+
+  <!-- Edificio Central Principal (Destacado) -->
+  <path d="M 205 160 L 256 110 L 307 160 L 307 380 L 205 380 Z" fill="#F8FAFC" />
+  
+  <!-- Puerta y Ventanas Centrales -->
+  <rect x="225" y="180" width="20" height="25" rx="3" fill="#0284C7" />
+  <rect x="267" y="180" width="20" height="25" rx="3" fill="#0284C7" />
+  <rect x="225" y="220" width="20" height="25" rx="3" fill="#0284C7" />
+  <rect x="267" y="220" width="20" height="25" rx="3" fill="#0284C7" />
+  <rect x="225" y="260" width="20" height="25" rx="3" fill="#0284C7" />
+  <rect x="267" y="260" width="20" height="25" rx="3" fill="#0284C7" />
+  
+  <!-- Puerta Principal -->
+  <path d="M 238 380 V 320 Q 256 305 274 320 V 380 Z" fill="url(#primaryGradient)" />
+
+  <!-- Base/Cinta de Crecimiento Económico (Flecha hacia arriba estilizada) -->
+  <path d="M 100 380 Q 256 420 412 380 L 412 395 Q 256 440 100 395 Z" fill="url(#accentGradient)" />
+  
+  <!-- Estrella de Excelencia superior -->
+  <polygon points="256,50 264,72 287,72 268,86 275,108 256,94 237,108 244,86 225,72 248,72" fill="url(#accentGradient)" />
+</svg>
