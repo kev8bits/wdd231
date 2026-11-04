@@ -1,0 +1,28 @@
+{
+    "FamilyName": "Montenegro",
+    "MoveInDate": "2022-03-25",
+    "NumberOfPeople": 4,
+    "VisitedByBishopric": true,
+    "familyMembers": [
+        {
+            "name": "Juan Montenegro",
+            "gender": "Male",
+            "birthdate": "1978-10-01"
+        },
+        {
+            "name": "Macarena Montenegro",
+            "gender": "Female",
+            "birthdate": "1980-02-16"
+        },
+        {
+            "name": "Pilar Montenegro",
+            "gender": "Female",
+            "birthdate": "2010-11-29"
+        },
+        {
+            "name": "Dante Montenegro",
+            "gender": "Male",
+            "birthdate": "2018-02-15"
+        }
+    ]
+}
