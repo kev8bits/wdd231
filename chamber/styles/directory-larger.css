@@ -46,11 +46,12 @@
         gap: 1rem;
         padding: 1rem 1.5rem;
     }
-}
 
+    /* Desktop Footer Layout */
     .footer-content {
         flex-direction: row;
         justify-content: space-between;
-        align-items: center; /* Aligns the three blocks vertically in the center */
+        align-items: center;
         text-align: left;
     }
+}

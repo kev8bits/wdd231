@@ -1,6 +1,6 @@
 :root {
     --primary-color: #1b365d;
-    --secondary-color: #e07a5f;
+    --secondary-color: #a33919; /* this made a contrast error so i made it darker */
     --background-color: #f8f9fa;
     --card-background: #ffffff;
     --text-color: #333333;
@@ -85,11 +85,11 @@ header {
     color: #ffffff;
 }
 
-/* Main Mobile View */
+/* Main Container (min-height prevents CLS) */
 main {
     padding: 1rem;
     max-width: 100%;
-    min-height: 80vh;
+    min-height: 80vh; 
 }
 
 main h1 {
@@ -141,7 +141,6 @@ main h1 {
     gap: 0.5rem; 
 }
 
-
 #directory-container.grid-layout img {
     width: 100%;
     max-width: 150px; 
@@ -150,17 +149,36 @@ main h1 {
     margin-bottom: 1.5rem; 
 }
 
-/* Custom class applied conditionally via JavaScript for white logos */
 #directory-container .member-card img.invert-filter {
-    /* brightness(0) converts all non-transparent pixels to solid black */
-    /* Alternatively, use invert(1) to just invert white to black while keeping other hues */
-    filter: brightness(0); 
-    opacity: 0.85; /* Softens the black to a dark gray to match text visually */
+    filter: brightness(0);
+    opacity: 0.85;
 }
 
-/* Ensure the drop-shadow from earlier doesn't clash with the brightness filter */
+#directory-container.grid-layout img:hover {
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.2));
+}
+
 #directory-container.grid-layout .member-card img.invert-filter:hover {
     filter: brightness(0) drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+#directory-container.grid-layout h2 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+#directory-container.grid-layout p {
+    font-size: 0.9rem;
+    color: #555555;
+    margin: 0;
+}
+
+#directory-container.grid-layout a {
+    margin-top: 1rem;
+    color: #0000ee;
+    text-decoration: underline;
+    font-size: 0.95rem;
 }
 
 /* List Layout (Mobile) */
@@ -183,19 +201,7 @@ main h1 {
     display: none;
 }
 
-.member-card img {
-    max-width: 180px;
-    height: auto;
-    object-fit: contain;
-    margin-bottom: 1rem;
-    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.35));
-    transition: filter 0.2s ease-in-out;
-}
-
-.member-card img:hover {
-    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.5));
-}
-
+/* Single Global Footer Declaration */
 footer {
     background-color: var(--primary-color);
     color: #ffffff;
@@ -230,7 +236,7 @@ footer {
     justify-content: center;
     width: 48px;
     height: 48px;
-    background-color: rgba(255, 255, 255, 0.15); /* Light circle on dark background */
+    background-color: rgba(255, 255, 255, 0.15);
     color: #ffffff;
     border-radius: 50%;
     text-decoration: none;

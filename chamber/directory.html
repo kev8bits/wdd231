@@ -7,20 +7,21 @@
     <meta name="description" content="Business directory for the Santa Fe Chamber of Commerce, promoting local commerce, services, and partnerships.">
     <meta name="author" content="Kevin Herrera">
 
-    <!-- Correct Favicon Integration -->
+    <!-- Favicon Integration -->
     <link rel="icon" href="images/favicon.webp" type="image/webp">
 
-    <!-- Open Graph Metadata -->
+    <!-- Open Graph Metadata (Requires Absolute URLs) -->
     <meta property="og:title" content="Santa Fe Chamber of Commerce Directory">
     <meta property="og:description" content="Discover local businesses, services, and members of the Santa Fe Chamber of Commerce.">
-    <meta property="og:image" content="images/logo(meta).webp">
+    <meta property="og:image" content="https://kev8bits.github.io/wdd231/chamber/images/favicon.webp">
+    <meta property="og:url" content="https://kev8bits.github.io/wdd231/chamber/directory.html">
     <meta property="og:type" content="website">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts (Corrected with rel="stylesheet") -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" as="style"">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" media="print" onload="this.media='all'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" media="print" onload="this.media='all'">
     <noscript>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap">
     </noscript>
@@ -28,6 +29,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="styles/directory.css">
+    <!-- Non-blocking desktop styles -->
     <link rel="stylesheet" href="styles/directory-larger.css" media="screen and (min-width: 48rem)">
 
     <!-- Scripts -->
@@ -36,7 +38,7 @@
 <body>
     <header>
         <div class="header-container">
-            <img src="images/favicon.webp" alt="Santa Fe Chamber of Commerce Logo" width="50" height="50" loading="eager">
+            <img src="images/favicon.webp" alt="Santa Fe Chamber of Commerce Logo" width="50" height="50" loading="eager" fetchpriority="high">
             <span>Santa Fe Chamber of Commerce</span>
         </div>
         <button id="ham-btn" class="hamburger" aria-label="Toggle Navigation Menu" aria-expanded="false"></button>
@@ -52,7 +54,8 @@
     </nav>
 
     <main>
-        <h1>Business Directory</h1>
+        <!-- H1 perfectly matches the document <title> -->
+        <h1>Chamber of Commerce Directory - Santa Fe</h1>
 
         <div class="view-controls">
             <button id="grid-view" class="active" aria-label="Display items in Grid view">Grid View</button>
@@ -66,10 +69,12 @@
         <div class="footer-content">
             <div class="footer-info">
                 <p><strong>Santa Fe Chamber of Commerce</strong></p>
+                <p>Central Bus Terminal</p>
                 <p>Santa Fe Capital, Argentina</p>
-                <p>info@santafechamber.org | +54 342 459-8888</p>
+                <p>info@santafechamber.org</p>
+                <p>+54 342 459-8888</p>
             </div>
-        
+
             <div class="footer-social">
                 <a href="#" aria-label="YouTube">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -89,7 +94,7 @@
             </div>
 
             <div class="footer-project">
-                <p>WDD231 Class Project</p>
+                <p>WDD 231 Class Project</p>
                 <p>Kevin Herrera</p>
                 <p>&copy; <span id="currentYear"></span> Santa Fe Chamber of Commerce</p>
                 <p id="lastModified"></p>
