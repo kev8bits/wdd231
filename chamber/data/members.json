@@ -1,0 +1,69 @@
+{
+    "members": [
+        {
+            "name": "Empresa Rio Uruguay",
+            "address": "Terminal de Omnibus, Santa Fe Capital",
+            "phone": "+54 342 459-8888",
+            "website": "https://www.riouruguaybus.com.ar",
+            "image": "images/rio-logo.webp",
+            "membershipLevel": 3,
+            "otherInfo": "Long-distance and regional passenger transportation services."
+        },
+        {
+            "name": "Gigared Santa Fe",
+            "address": "San Martin 2300, Santa Fe Capital",
+            "phone": "+54 342 450-1000",
+            "website": "https://www.gigared.com.ar",
+            "image": "images/gigared_logo.webp",
+            "membershipLevel": 3,
+            "otherInfo": "High-speed fiber optic internet and digital cable television provider."
+        },
+        {
+            "name": "Malmo Coffee & Bakery",
+            "address": "Bv. Galvez 1200, Santa Fe Capital",
+            "phone": "+54 342 412-3456",
+            "website": "https://malmosrl.com/locaciones",
+            "image": "images/logo-malmo.webp",
+            "membershipLevel": 2,
+            "otherInfo": "Specialty coffee shop, artisanal bakery, and breakfast smoothies.",
+            "isWhiteLogo": true
+        },
+        {
+            "name": "Escorial Electrodomesticos",
+            "address": "Av. Aristobulo del Valle 5400, Santa Fe Capital",
+            "phone": "+54 342 489-0123",
+            "website": "https://www.escorial.com.ar",
+            "image": "images/logo-escorial.webp",
+            "membershipLevel": 2,
+            "otherInfo": "Home appliance manufacturer specializing in gas stoves and heaters.",
+            "isWhiteLogo": true
+        },
+        {
+            "name": "SEOM Santa Fe",
+            "address": "Salta 2900, Santa Fe Capital",
+            "phone": "+54 342 457-4150",
+            "website": "https://santafe.altec.com.ar/park/",
+            "image": "images/seom-logo.webp",
+            "membershipLevel": 1,
+            "otherInfo": "Municipal smart street parking system management."
+        },
+        {
+            "name": "Gold Burger Draxxo",
+            "address": "Av. 7 de Marzo 1500, Santo Tome",
+            "phone": "+54 342 474-9999",
+            "website": "https://www.instagram.com/goldburger___/",
+            "image": "images/gold-logo.webp",
+            "membershipLevel": 1,
+            "otherInfo": "Gourmet burger restaurant and fast-casual dining."
+        },
+        {
+            "name": "Fullpond Marketing Agency",
+            "address": "Urquiza 1800, Santa Fe Capital",
+            "phone": "+54 342 422-5555",
+            "website": "https://www.fullpond.co/",
+            "image": "images/fullpond-logo.webp",
+            "membershipLevel": 2,
+            "otherInfo": "Social media, content creation, and digital marketing specialist."
+        }
+    ]
+}

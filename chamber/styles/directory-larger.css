@@ -1,0 +1,56 @@
+@media only screen and (min-width: 48rem) {
+    header,
+    nav,
+    main,
+    footer {
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    /* Horizontal Desktop Navigation */
+    .navigation {
+        display: block;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .navigation ul {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .navigation a {
+        border-bottom: none;
+        padding: 1rem 1.5rem;
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .navigation a:hover {
+        background-color: var(--secondary-color);
+        color: #ffffff;
+    }
+
+    main {
+        padding: 2rem 1rem;
+    }
+
+    /* Desktop List View Layout */
+    #directory-container.list-layout .member-card {
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr 1fr;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 1.5rem;
+    }
+}
+
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center; /* Aligns the three blocks vertically in the center */
+        text-align: left;
+    }

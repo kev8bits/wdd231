@@ -1,0 +1,249 @@
+:root {
+    --primary-color: #1b365d;
+    --secondary-color: #e07a5f;
+    --background-color: #f8f9fa;
+    --card-background: #ffffff;
+    --text-color: #333333;
+    --border-color: #cbd5e1;
+    --font-primary: 'Barlow', Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-container span {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.hamburger::before {
+    content: "\2630";
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+}
+
+/* Mobile Navigation */
+.navigation {
+    display: none;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style: none;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.8rem 1.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.navigation li.current a {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+}
+
+/* Main Mobile View */
+main {
+    padding: 1rem;
+    max-width: 100%;
+    min-height: 80vh;
+}
+
+main h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+/* Controls */
+.view-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.view-controls button {
+    padding: 0.5rem 1.2rem;
+    background-color: #ffffff;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.view-controls button.active {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* Grid Layout (Default Responsive 1-column mobile) */
+#directory-container.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+#directory-container.grid-layout .member-card {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem 1.5rem; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 0.5rem; 
+}
+
+
+#directory-container.grid-layout img {
+    width: 100%;
+    max-width: 150px; 
+    height: 110px;
+    object-fit: contain;
+    margin-bottom: 1.5rem; 
+}
+
+/* Custom class applied conditionally via JavaScript for white logos */
+#directory-container .member-card img.invert-filter {
+    /* brightness(0) converts all non-transparent pixels to solid black */
+    /* Alternatively, use invert(1) to just invert white to black while keeping other hues */
+    filter: brightness(0); 
+    opacity: 0.85; /* Softens the black to a dark gray to match text visually */
+}
+
+/* Ensure the drop-shadow from earlier doesn't clash with the brightness filter */
+#directory-container.grid-layout .member-card img.invert-filter:hover {
+    filter: brightness(0) drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* List Layout (Mobile) */
+#directory-container.list-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#directory-container.list-layout .member-card {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+#directory-container.list-layout img {
+    display: none;
+}
+
+.member-card img {
+    max-width: 180px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.35));
+    transition: filter 0.2s ease-in-out;
+}
+
+.member-card img:hover {
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2.5rem;
+}
+
+.footer-info p, 
+.footer-project p {
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: rgba(255, 255, 255, 0.15); /* Light circle on dark background */
+    color: #ffffff;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-social a:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+.footer-social svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
