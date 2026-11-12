@@ -3,9 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Santa Fe Chamber of Commerce | Site Plan Document</title>
+    <meta name="description" content="Site plan specification document for the Santa Fe Chamber of Commerce project in WDD 231.">
+    <meta name="author" content="Kevin Herrera">
+    <link rel="stylesheet" href="styles/siteplan.css">
+    <!-- Google Fonts: Barlow (Headings) and Montserrat (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <div class="header-container">
+            <h1>Santa Fe Chamber of Commerce</h1>
+            <h2>WDD 231 Web Frontend Development Site Plan</h2>
+        </div>
+        <a href="index.html" class="back-home-btn">&larr; Back to Home</a>
+    </header>
+
+    <main>
+        <!-- Site Overview -->
+        <section class="card">
+            <h2>Site Overview & Purpose</h2>
+            <div class="content-block">
+                <h3>Site Name</h3>
+                <p>Santa Fe Chamber of Commerce</p>
+
+                <h3>Site Purpose</h3>
+                <p>The Santa Fe Chamber of Commerce website serves as a digital platform to promote local commerce, connect entrepreneurs in Santa Fe, Argentina, provide a directory of verified local businesses, and share economic news and event notifications.</p>
+
+                <h3>Target Audience</h3>
+                <p>Local business owners, regional entrepreneurs, investors, consumers seeking reliable local service providers, and job seekers.</p>
+
+                <h3>User Scenarios</h3>
+                <ul>
+                    <li>A resident searches for a certified business in Santa Fe using the toggleable directory grid/list views.</li>
+                    <li>A commercial member wants to evaluate membership tiers (NP, Bronze, Silver, Gold) and submit a registration application.</li>
+                    <li>A user checks local real-time weather forecasts and upcoming commercial spotlights on the home page.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Color Palette -->
+        <section class="card">
+            <h2>2. Color Palette & Visual Style</h2>
+            <p>The color scheme combines Primary Navy with Terracotta and Gold accents to establish professional authority, warmth, and WCAG contrast compliance.</p>
+            
+            <div class="color-grid">
+                <div class="color-box primary">
+                    <span class="color-name">Primary Navy</span>
+                    <span class="color-hex">#0F2C59</span>
+                    <span class="color-usage">Main headers, navigation backgrounds, dark section footers</span>
+                </div>
+                <div class="color-box secondary">
+                    <span class="color-name">Terracotta</span>
+                    <span class="color-hex">#C85A32</span>
+                    <span class="color-usage">Subheaders, call-to-action highlights, category badges</span>
+                </div>
+                <div class="color-box accent">
+                    <span class="color-name">Accent Gold</span>
+                    <span class="color-hex">#FFC436</span>
+                    <span class="color-usage">Button states, spotlight borders, key interactive cues</span>
+                </div>
+                <div class="color-box background">
+                    <span class="color-name">Light Gray Surface</span>
+                    <span class="color-hex">#F8F9FA</span>
+                    <span class="color-usage">Page background, card background contrast</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography -->
+        <section class="card">
+            <h2>3. Typography Standard</h2>
+            <div class="typography-demo">
+                <div class="font-sample heading-font">
+                    <h3>Heading Font: Barlow</h3>
+                    <p class="font-preview">Barlow (SemiBold 600 / Bold 700) — Used for h1, h2, h3 headers, navigation links, and section titles.</p>
+                </div>
+                <div class="font-sample body-font">
+                    <h3>Body Font: Montserrat</h3>
+                    <p class="font-preview">Montserrat (Regular 400 / Medium 500) — Used for body copy, business card attributes, form fields, and table metadata.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Site Architecture -->
+        <section class="card">
+            <h2>4. Sitemap & Page Structure</h2>
+            <ul class="sitemap-list">
+                <li><strong>Home Page (index.html):</strong> SVG logo, responsive navigation bar, hero banner with join CTA, live OpenWeatherMap API widget, dynamic member spotlights.</li>
+                <li><strong>Directory Page (directory.html):</strong> Interactive grid/list layout displaying commercial records fetched asynchronously from <code>members.json</code>.</li>
+                <li><strong>Discover Page (discover.html):</strong> Responsive visual grid of local demographics, business sector growth, and lazy-loaded imagery.</li>
+                <li><strong>Join Page (join.html):</strong> Structured HTML form for business onboarding with membership level descriptions and timestamp features.</li>
+            </ul>
+        </section>
+
+        <!-- Wireframes -->
+        <section class="card">
+            <h2>5. Wireframes Layout</h2>
+            <div class="wireframe-container">
+                <div class="wireframe-box">
+                    <h3>Mobile Layout View</h3>
+                    <div class="layout-sketch mobile-sketch">
+                        <div class="sketch-header">Header & Hamburger Menu</div>
+                        <div class="sketch-hero">Hero CTA Banner</div>
+                        <div class="sketch-content">Weather & Spotlight Cards (Single Column)</div>
+                        <div class="sketch-footer">Single Column Footer</div>
+                    </div>
+                </div>
+                <div class="wireframe-box">
+                    <h3>Desktop Layout View</h3>
+                    <div class="layout-sketch desktop-sketch">
+                        <div class="sketch-header">SVG Logo & Horizontal Navigation Bar</div>
+                        <div class="sketch-hero">Wide Hero Banner with Join Call-to-Action</div>
+                        <div class="sketch-main-grid">
+                            <div class="sketch-col">Spotlight Grid (members.json)</div>
+                            <div class="sketch-col">Weather Widget & Events Sidebar</div>
+                        </div>
+                        <div class="sketch-footer">Multi-column Footer Navigation & Credits</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Santa Fe Chamber of Commerce Site Plan | Kevin Herrera | WDD 231</p>
+    </footer>
 </body>
 </html>

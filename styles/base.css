@@ -7,6 +7,28 @@
     --line-height-base: 1.5;
 }
 
+/*------------------ focus box for keyboard navegation ----------------*/
+:focus-visible {
+    outline: 3px solid #ffbf47;
+    outline-offset: 3px;
+}
+
+button:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
+}
+
+    /*  
+    this is necesary because the CSS specificity. 
+    on line 184 filter buttons exists CSS rules for that buttons,
+    so if we want a higher specificity score we need use this
+    */
+.filters button:focus-visible {
+    outline: 3px solid #ffbf47;
+    outline-offset: 3px;
+}
+
+
 /*------------------ SITE WIDE ----------------*/
 * {
     box-sizing: border-box;
@@ -176,7 +198,6 @@ main h1 {
     border-radius: 4px;
     cursor: pointer;
     font-size: 0.95rem;
-    transition: background-color 0.3s ease;
 }
 
 .filters button:hover {
