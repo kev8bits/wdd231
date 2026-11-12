@@ -1,7 +1,7 @@
 // scripts/main.js
 
-import ChamberDirectory from './ChamberDirectory.js';
-import { NavigationController, FooterController } from './UIControllers.js';
+import ChamberDirectory from './ChamberDirectory.mjs';
+import { NavigationController, FooterController } from './UIControllers.mjs';
 
 
 document.addEventListener('DOMContentLoaded', () => {
