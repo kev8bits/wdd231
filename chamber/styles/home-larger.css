@@ -1,21 +1,22 @@
+@media only screen and (min-width: 48rem) {
+    .hero img {
+        height: 440px;
+    }
 
-.hero img {
-height: 440px;
-}
+    .hero-overlay {
+        padding: 3rem;
+    }
 
-.hero-overlay {
-    padding: 3rem;
-}
+    .hero-overlay h1 {
+        font-size: 2.5rem;
+        max-width: 22ch;
+    }
 
-.hero-overlay h1 {
-    font-size: 2.5rem;
-    max-width: 22ch;
-}
+    .info-panels {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
 
-.info-panels {
-    grid-template-columns: 2fr 1fr 1fr;
-}
-
-.spotlights-grid {
-    grid-template-columns: repeat(3, 1fr);
+    .spotlights-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
