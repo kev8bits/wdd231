@@ -23,7 +23,8 @@ button:focus-visible {
     on line 184 filter buttons exists CSS rules for that buttons,
     so if we want a higher specificity score we need use this
     */
-.filters button:focus-visible {
+.filters button:focus-visible,
+.course-card:focus-visible {
     outline: 3px solid #ffbf47;
     outline-offset: 3px;
 }
@@ -221,6 +222,10 @@ main h1 {
     text-align: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     transition: transform 0.2s ease;
+    width: 100%;
+    font-family: inherit;
+    color: inherit;
+    cursor: pointer;
 }
 
 .course-card:hover {
@@ -245,4 +250,28 @@ main h1 {
     font-weight: bold;
     margin-top: 15px;
     font-size: 1rem;
+}
+
+/* --- Dialog modal style --- */
+dialog {
+    border: 1px solid rgb(0 0 0 / 10%);
+    border-radius: .25rem;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
+}
+
+dialog::backdrop {
+    background-color: rgb(0 0 0 / 50%);
+}
+
+dialog button {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    padding: .5rem 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    cursor: pointer;
 }

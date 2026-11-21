@@ -67,15 +67,39 @@ const btnAll = document.querySelector('#all');
 const btnCse = document.querySelector('#cse');
 const btnWdd = document.querySelector('#wdd');
 
+// Initialize the dialog element reference
+const courseDetails = document.querySelector('#course-details');
+
 function calculateTotalCredits(courseList) {
     return courseList.reduce((sum, course) => sum + course.credits, 0);
+}
+
+// Function to populate and open the modal
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+        <button id="closeModal" aria-label="Close modal">X</button>
+        <h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p><strong>Credits</strong>: ${course.credits}</p>
+        <p><strong>Certificate</strong>: ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    `;
+    courseDetails.showModal();
+
+    const closeModal = document.querySelector('#closeModal');
+    closeModal.addEventListener('click', () => {
+        courseDetails.close();
+    });
 }
 
 function displayCourses(filteredCourses) {
     coursesContainer.innerHTML = ''; 
 
     filteredCourses.forEach(course => {
-        const courseCard = document.createElement('div');
+        // Create a <button> instead of a <div>
+        const courseCard = document.createElement('button');
         courseCard.classList.add('course-card');
 
         if (course.completed) {
@@ -86,12 +110,25 @@ function displayCourses(filteredCourses) {
             <h3>${course.subject} ${course.number}</h3>
         `;
 
+        // Attach the click listener directly to each generated button
+        courseCard.addEventListener('click', () => {
+            displayCourseDetails(course);
+        });
+
         coursesContainer.appendChild(courseCard);
     });
 
     totalCreditsDisplay.textContent = calculateTotalCredits(filteredCourses);
 }
 
+// Close the modal when the user clicks outside of it (on the backdrop)
+courseDetails.addEventListener('click', (event) => {
+    if (event.target === courseDetails) {
+        courseDetails.close();
+    }
+});
+
+// Filter button event listeners
 btnAll.addEventListener('click', () => {
     displayCourses(courses);
 });
@@ -106,4 +143,5 @@ btnWdd.addEventListener('click', () => {
     displayCourses(wddCourses);
 });
 
+// Initial render on page load
 displayCourses(courses);
