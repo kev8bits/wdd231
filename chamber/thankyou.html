@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for applying to join the Santa Fe Chamber of Commerce.">
+    <meta name="author" content="Kevin Herrera">
+    <title>Thank You | Santa Fe Chamber of Commerce</title>
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Application Received | Santa Fe Chamber of Commerce">
+    <meta property="og:description" content="We have received your membership application for the Santa Fe Chamber of Commerce.">
+    <meta property="og:image" content="https://kev8bits.github.io/wdd231/chamber/images/puente_sfe.webp">
+    <meta property="og:url" content="https://kev8bits.github.io/wdd231/chamber/thankyou.html">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/base-larger.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <link rel="stylesheet" href="styles/join-larger.css">
+
+    <!-- JS -->
+    <script type="module" src="scripts/main.mjs"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="images/logo_header.webp" alt="Santa Fe Chamber of Commerce Logo" width="50" height="50">
+            <span>Santa Fe Chamber of Commerce</span>
+        </div>
+        <button id="ham-btn" class="hamburger" aria-label="Toggle navigation menu"></button>
+    </header>
+
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li class="current"><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="siteplan.html">Site Plan</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Thank You for Applying!</h1>
+
+        <section class="thankyou-card">
+            <h2>Application Summary</h2>
+            <p>We appreciate your interest in joining the Santa Fe Chamber of Commerce. Our membership team will review your information and contact you shortly.</p>
+            <div id="submission-summary"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <p><strong>Santa Fe Chamber of Commerce</strong></p>
+                <p>Central Bus Terminal, Santa Fe Capital, Argentina</p>
+                <p>info@santafechamber.org</p>
+                <p>+54 342 459-8888</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/kevin.herrera.94849" target="_blank" rel="noopener" aria-label="Facebook Profile">
+                    <img src="../images/facebook.svg" alt="" width="24" height="24" loading="lazy">
+                </a>
+                <a href="https://www.instagram.com/kev_hc/" target="_blank" rel="noopener" aria-label="Instagram Profile">
+                    <img src="../images/instagram.svg" alt="" width="24" height="24" loading="lazy">
+                </a>
+                <a href="https://www.linkedin.com/in/kevin-herrera-a41b052ba" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+                    <img src="../images/linkedin.svg" alt="" width="24" height="24" loading="lazy">
+                </a>
+                <a href="https://github.com/kev8bits" target="_blank" rel="noopener" aria-label="GitHub Profile">
+                    <img src="../images/github.svg" alt="" width="24" height="24" loading="lazy">
+                </a>
+            </div>
+            <div class="footer-project">
+                <p>WDD 231 Class Project</p>
+                <p>Kevin Herrera</p>
+                <p>&copy;<span id="currentyear"></span> Santa Fe Chamber of Commerce</p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

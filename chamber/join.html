@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apply for membership at the Santa Fe Chamber of Commerce and connect with local businesses.">
+    <meta name="author" content="Kevin Herrera">
+    <title>Join | Santa Fe Chamber of Commerce</title>
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Join the Santa Fe Chamber of Commerce">
+    <meta property="og:description" content="Choose your membership level and grow your business network in Santa Fe.">
+    <meta property="og:image" content="https://kev8bits.github.io/wdd231/chamber/images/puente_sfe.webp">
+    <meta property="og:url" content="https://kev8bits.github.io/wdd231/chamber/join.html">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/base-larger.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <link rel="stylesheet" href="styles/join-larger.css">
+
+    <!-- JS -->
+    <script type="module" src="scripts/main.mjs"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="images/logo_header.webp" alt="Santa Fe Chamber of Commerce Logo" width="50" height="50">
+            <span>Santa Fe Chamber of Commerce</span>
+        </div>
+        <button id="ham-btn" class="hamburger" aria-label="Toggle navigation menu"></button>
+    </header>
+
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li class="current"><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="siteplan.html">Site Plan</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Membership Application</h1>
+
+        <div class="join-layout">
+            <!-- Membership Application Form -->
+            <section class="form-section">
+                <h2>Apply to Join</h2>
+                <form method="get" action="thankyou.html" class="wf1">
+                    <label>
+                        First Name *
+                        <input type="text" name="first" title="Applicant First Name" autocomplete="given-name" required>
+                    </label>
+
+                    <label>
+                        Last Name *
+                        <input type="text" name="last" title="Applicant Last Name" autocomplete="family-name" required>
+                    </label>
+
+                    <label>
+                        Organizational Title
+                        <input type="text" name="title" title="Organizational Title (at least 7 letters, spaces, or hyphens)" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                    </label>
+
+                    <label>
+                        Email Address *
+                        <input type="email" name="email" title="Applicant Email Address" autocomplete="email" placeholder="example@domain.com" required>
+                    </label>
+
+                    <label>
+                        Mobile Phone Number *
+                        <input type="tel" name="phone" title="Mobile Phone Number" autocomplete="tel" required>
+                    </label>
+
+                    <label>
+                        Business / Organization Name *
+                        <input type="text" name="organization" title="Business or Organization Name" autocomplete="organization" required>
+                    </label>
+
+                    <label>
+                        Membership Level *
+                        <select name="membership" title="Select a Membership Level" required>
+                            <option value="" disabled selected>Select a level...</option>
+                            <option value="np">NP Membership (Non-Profit - No Fee)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Business / Organization Description
+                        <textarea name="description" title="Describe your business or organization" rows="4"></textarea>
+                    </label>
+
+                    <input type="hidden" name="timestamp" id="timestamp">
+
+                    <input type="submit" value="Apply for Membership">
+                </form>
+            </section>
+
+            <!-- Membership Level Cards -->
+            <section class="cards-section">
+                <h2>Membership Levels</h2>
+                <div class="membership-cards">
+                    <article class="level-card">
+                        <h3>Non-Profit Membership</h3>
+                        <button type="button" class="open-modal-btn" data-modal="modal-np">Learn More</button>
+                    </article>
+
+                    <article class="level-card">
+                        <h3>Bronze Membership</h3>
+                        <button type="button" class="open-modal-btn" data-modal="modal-bronze">Learn More</button>
+                    </article>
+
+                    <article class="level-card">
+                        <h3>Silver Membership</h3>
+                        <button type="button" class="open-modal-btn" data-modal="modal-silver">Learn More</button>
+                    </article>
+
+                    <article class="level-card">
+                        <h3>Gold Membership</h3>
+                        <button type="button" class="open-modal-btn" data-modal="modal-gold">Learn More</button>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <!-- Membership Modals -->
+        <dialog id="modal-np" class="membership-modal">
+            <div class="modal-header">
+                <h3>Non-Profit Membership</h3>
+                <button type="button" class="close-modal-btn" aria-label="Close modal">&times;</button>
+            </div>
+            <p><strong>Cost:</strong> Free ($0 / year)</p>
+            <ul>
+                <li>Listing in the online Chamber Directory</li>
+                <li>Access to monthly community networking events</li>
+                <li>Inclusion in the monthly Chamber newsletter</li>
+            </ul>
+        </dialog>
+
+        <dialog id="modal-bronze" class="membership-modal">
+            <div class="modal-header">
+                <h3>Bronze Membership</h3>
+                <button type="button" class="close-modal-btn" aria-label="Close modal">&times;</button>
+            </div>
+            <p><strong>Cost:</strong> $250 / year</p>
+            <ul>
+                <li>All Non-Profit Membership benefits</li>
+                <li>15% discount on Chamber workshops and training sessions</li>
+                <li>Ribbon-cutting ceremony announcement for new businesses</li>
+            </ul>
+        </dialog>
+
+        <dialog id="modal-silver" class="membership-modal">
+            <div class="modal-header">
+                <h3>Silver Membership</h3>
+                <button type="button" class="close-modal-btn" aria-label="Close modal">&times;</button>
+            </div>
+            <p><strong>Cost:</strong> $500 / year</p>
+            <ul>
+                <li>All Bronze Membership benefits</li>
+                <li>30% discount on Chamber events and booth sponsorships</li>
+                <li>Quarterly social media feature across Chamber channels</li>
+                <li>Access to specialized business leadership training</li>
+            </ul>
+        </dialog>
+
+        <dialog id="modal-gold" class="membership-modal">
+            <div class="modal-header">
+                <h3>Gold Membership</h3>
+                <button type="button" class="close-modal-btn" aria-label="Close modal">&times;</button>
+            </div>
+            <p><strong>Cost:</strong> $1,000 / year</p>
+            <ul>
+                <li>All Silver Membership benefits</li>
+                <li>Rotating Spotlight position on the Chamber Home Page</li>
+                <li>50% discount on all Chamber events and annual gala</li>
+                <li>VIP invitations to regional trade and policy roundtables</li>
+            </ul>
+        </dialog>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <p><strong>Santa Fe Chamber of Commerce</strong></p>
+                <p>Central Bus Terminal, Santa Fe Capital, Argentina</p>
+                <p>info@santafechamber.org</p>
+                <p>+54 342 459-8888</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/kevin.herrera.94849" target="_blank" rel="noopener" aria-label="Facebook Profile">
+                    <img src="../images/facebook.svg" alt="" width="24" height="24" loading="lazy">
+                </a>
+                <a href="https://www.instagram.com/kev_hc/" target="_blank" rel="noopener" aria-label="Instagram Profile">
+                    <img src="../images/instagram.svg" alt="" width="24" height="24" loading="lazy">
+                </a>
+                <a href="https://www.linkedin.com/in/kevin-herrera-a41b052ba" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+                    <img src="../images/linkedin.svg" alt="" width="24" height="24" loading="lazy">
+                </a>
+                <a href="https://github.com/kev8bits" target="_blank" rel="noopener" aria-label="GitHub Profile">
+                    <img src="../images/github.svg" alt="" width="24" height="24" loading="lazy">
+                </a>
+            </div>
+            <div class="footer-project">
+                <p>WDD 231 Class Project</p>
+                <p>Kevin Herrera</p>
+                <p>&copy;<span id="currentyear"></span> Santa Fe Chamber of Commerce</p>
+                <p id="lastModified"></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
