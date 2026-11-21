@@ -15,10 +15,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
     FooterController.populateDates();
 });
-
-
-//this evades render-blocking requests on lighthouse reports
-const fontLink = document.createElement('link');
-fontLink.rel = 'stylesheet';
-fontLink.href = 'https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap';
-document.head.appendChild(fontLink);
