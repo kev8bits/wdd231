@@ -32,7 +32,7 @@
     <!-- Scripts -->
     <script type="module" src="scripts/home.mjs"></script>
     <!-- preload hero image -->
-    <link rel="preload" as="image" href="images/puente_sfe.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="images/puente_sfe.webp" imagesrcset="images/puente_sfe_small.webp 600w, images/puente_sfe.webp 1054w" imagesizes="(max-width: 767px) 100vw, 1200px" fetchpriority="high">
 </head>
 <body>
     <header>
@@ -56,7 +56,7 @@
     <main class="home-main">
         <!-- Hero Section (Scalable <img> + CTA) -->
         <section class="hero" aria-label="Welcome Banner">
-            <img src="images/puente_sfe.webp" alt="Panoramic view of Santa Fe Capital commercial district and suspension bridge" width="1054" height="721" loading="eager" fetchpriority="high">
+            <img src="images/puente_sfe.webp" srcset="images/puente_sfe_small.webp 600w, images/puente_sfe.webp 1054w" sizes="(max-width: 767px) 100vw, 1200px" alt="Panoramic view of Santa Fe Capital commercial district and suspension bridge" width="1054" height="721" loading="eager" fetchpriority="high">
             <div class="hero-overlay">
                 <h1>Building a Stronger Santa Fe Business Community</h1>
                 <p>Connect with regional leaders, expand your network, and grow your enterprise.</p>
