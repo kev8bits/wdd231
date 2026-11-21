@@ -1,6 +1,6 @@
 @media only screen and (min-width: 48rem) {
     .hero img {
-        height: 440px;
+        max-height: 450px;
     }
 
     .hero-overlay {
