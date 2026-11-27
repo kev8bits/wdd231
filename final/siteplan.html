@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Website project plan for La Pena del Fuego, an Argentine asado club in Santa Fe featuring beef cut guides, fire techniques, and monthly gatherings.">
+  <meta name="author" content="Kevin Herrera">
+  <title>Project Site Plan | La Peña del Fuego</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;family=JetBrains+Mono:wght@500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <span class="brand-badge">WDD 231 Project Blueprint</span>
+      <h1>La Peña del Fuego</h1>
+      <p class="subtitle">Website Architecture, Visual Identity, and Responsive Layout Plan</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="plan-section" aria-labelledby="site-name-heading">
+      <h2 id="site-name-heading">1. Site Name</h2>
+      <div class="card">
+        <h3>La Peña del Fuego</h3>
+        <p>
+          In Argentine culture, a <em>peña</em> is a social gathering centered around shared food, conversation, and tradition. Pairing it with <em>del Fuego</em> (of the Fire) establishes an immediate identity rooted in traditional wood and charcoal grilling in Santa Fe, Argentina.
+        </p>
+        <p class="domain-note">
+          Representative domain: <code class="mono-tag">lapenadelfuego.com.ar</code>
+        </p>
+      </div>
+    </section>
+
+    <section class="plan-section" aria-labelledby="site-purpose-heading">
+      <h2 id="site-purpose-heading">2. Site Purpose</h2>
+      <div class="card">
+        <p>
+          <strong>La Peña del Fuego</strong> serves as a digital hub for preserving and sharing traditional Argentine asado techniques in Santa Fe. The website will provide:
+        </p>
+        <ul class="styled-list">
+          <li>An interactive catalog of classic beef cuts and offal (<em>achuras</em>) loaded dynamically from a structured JSON dataset, including grill height, ember intensity, and cooking times.</li>
+          <li>A schedule of upcoming monthly gatherings (<em>peñas</em>) in Santa Fe with venue details and seating capacity.</li>
+          <li>A membership and event registration form with local storage persistence so returning visitors can save preferred cuts and view their registration details.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="plan-section" aria-labelledby="scenarios-heading">
+      <h2 id="scenarios-heading">3. Target Audience Scenarios</h2>
+      <div class="scenarios-grid">
+        <article class="card">
+          <span class="tag-pill">Scenario 01 — Technique</span>
+          <h3>"How long should I cook a whole vacio, and what ember heat level does it need?"</h3>
+          <p>
+            Answered through the interactive cuts guide on the home and catalog views, displaying exact cooking times per side, grill elevation, and preparation notes.
+          </p>
+        </article>
+        <article class="card">
+          <span class="tag-pill">Scenario 02 — Community</span>
+          <h3>"When is the next monthly asado gathering in Santa Fe, and how do I reserve a spot?"</h3>
+          <p>
+            Answered directly on the home page spotlight card and through the dedicated membership and event registration form.
+          </p>
+        </article>
+        <article class="card">
+          <span class="tag-pill">Scenario 03 — Personalization</span>
+          <h3>"Can I bookmark specific cuts and side dishes to reference while shopping at the butcher?"</h3>
+          <p>
+            Answered by saving favorite cuts in browser storage so visitors can quickly review their personal selection on mobile devices.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="plan-section" aria-labelledby="color-scheme-heading">
+      <h2 id="color-scheme-heading">4. Color Scheme — Night Ember &amp; Iron</h2>
+      <p class="section-intro">
+        This planning document exclusively uses the five-color palette designed for the final website, balancing warm editorial readability with high-contrast accents.
+      </p>
+      <div class="palette-grid">
+        <article class="swatch-card swatch-bg">
+          <h3>Butcher Paper</h3>
+          <p class="hex-code">#FAF6F0</p>
+          <p>Main page background used across all views to provide warm contrast without eye strain.</p>
+        </article>
+        <article class="swatch-card swatch-surface">
+          <h3>Light Ash</h3>
+          <p class="hex-code">#EFE7DC</p>
+          <p>Card containers, technical cut sheets, and secondary callout surfaces.</p>
+        </article>
+        <article class="swatch-card swatch-primary">
+          <h3>Prime Cut Red</h3>
+          <p class="hex-code">#7A1C1C</p>
+          <p>Primary headings, header background, structural dividers, and active navigation states.</p>
+        </article>
+        <article class="swatch-card swatch-accent">
+          <h3>Ember Orange</h3>
+          <p class="hex-code">#C84B11</p>
+          <p>Primary call-to-action buttons, category badges, and spotlight borders.</p>
+        </article>
+        <article class="swatch-card swatch-text">
+          <h3>Charcoal Black</h3>
+          <p class="hex-code">#1E1B18</p>
+          <p>Body copy, technical specifications, form labels, and footer background.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="plan-section" aria-labelledby="typography-heading">
+      <h2 id="typography-heading">5. Typography</h2>
+      <div class="typography-grid">
+        <article class="card">
+          <span class="tag-pill">Headings</span>
+          <h3 class="sample-heading">Fraunces (Serif — 600, 700)</h3>
+          <p class="type-specimen-serif">El arte del fuego lento y la buena mesa.</p>
+          <p>
+            Applied to main titles (<code>h1</code>, <code>h2</code>, <code>h3</code>) and hero statements to evoke classic Argentine parrilla menus with an editorial feel.
+          </p>
+        </article>
+        <article class="card">
+          <span class="tag-pill">Body &amp; Interface</span>
+          <h3>Plus Jakarta Sans (Sans-Serif — 400, 500, 700)</h3>
+          <p class="type-specimen-sans">Clean, legible prose for preparation guides, club history, navigation links, and registration forms.</p>
+          <p>
+            Applied to all paragraphs, list items, form controls, and interactive buttons across desktop and mobile viewports.
+          </p>
+        </article>
+        <article class="card">
+          <span class="tag-pill">Technical Data</span>
+          <h3>JetBrains Mono (Monospace — 500)</h3>
+          <p class="type-specimen-mono">TEMP: MEDIUM EMBER | TIME: 45 MIN / SIDE | HEIGHT: 15 CM</p>
+          <p>
+            Applied to cooking durations, grill elevation measurements, ember heat indicators, and event dates.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="plan-section" aria-labelledby="wireframe-heading">
+      <h2 id="wireframe-heading">6. Home Page Wireframes</h2>
+      <p class="section-intro">
+        Black-and-white structural blueprints for the home page (<code>index.html</code>) following an asymmetric editorial split hero and modular cut spotlight layout.
+      </p>
+      <div class="wireframe-grid">
+        <figure class="card wireframe-figure">
+          <img src="images/wireframe-mobile.webp" alt="Black and white mobile viewport wireframe sketch for La Pena del Fuego home page" width="375" height="820" loading="lazy">
+          <figcaption><strong>Mobile Viewport (375px):</strong> Single-column stacked hierarchy prioritizing primary navigation, asymmetric hero content, next gathering card, and featured cut blocks.</figcaption>
+        </figure>
+        <figure class="card wireframe-figure">
+          <img src="images/wireframe-desktop.webp" alt="Black and white desktop viewport wireframe sketch for La Pena del Fuego home page" width="1200" height="900" loading="lazy">
+          <figcaption><strong>Desktop Viewport (1200px):</strong> Two-column 60/40 asymmetric split hero with overlapping gathering card, horizontal fire reference strip, and asymmetric bento grid for featured cuts.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 La Peña del Fuego | Kevin Herrera | WDD 231 Individual Project Site Plan</p>
+    </div>
+  </footer>
+</body>
+</html>
