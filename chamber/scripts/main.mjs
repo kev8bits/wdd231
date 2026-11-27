@@ -1,6 +1,6 @@
 // scripts/main.js
 
-import { NavigationController, FooterController } from './UIControllers.mjs';
+import { NavigationController, FooterController } from './ui-controllers.mjs';
 
 document.addEventListener('DOMContentLoaded', async () => {
     new NavigationController('#ham-btn', '#nav-bar');
