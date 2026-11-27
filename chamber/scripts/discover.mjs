@@ -104,9 +104,11 @@ function renderDiscoverCards(places) {
         img.alt = `${place.name} in Santa Fe`;
         img.width = place.width;
         img.height = place.height;
-        if (index > 1) {
+        if (index === 0) {
+            img.fetchPriority = 'high';
+        } else if (index > 1) {
             img.loading = 'lazy';
-        }
+        } 
         figure.appendChild(img);
 
         const content = document.createElement('div');
