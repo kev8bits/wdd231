@@ -21,6 +21,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  min-height: 3.4rem;
   background-color: var(--card-background);
   border: 1px solid var(--border-color);
   border-left: 5px solid var(--secondary-color);
@@ -114,6 +115,7 @@
     "card7"
     "card8";
   gap: 1.25rem;
+  min-height: 1200px;
 }
 
 .discover-card {

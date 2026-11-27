@@ -21,6 +21,10 @@
   <link rel="stylesheet" href="styles/discover.css">
   <link rel="stylesheet" href="styles/discover-larger.css" media="(min-width: 40.0625rem)">
   <script type="module" src="scripts/main.mjs"></script>
+
+  <link rel="modulepreload" href="scripts/UIControllers.mjs">
+  <link rel="modulepreload" href="scripts/discover.mjs">
+  <link rel="modulepreload" href="data/discover.mjs">
 </head>
 <body>
   <header>
@@ -44,7 +48,7 @@
     <h1>Discover Santa Fe Capital</h1>
 
     <aside id="visit-banner" class="visit-banner" aria-live="polite">
-      <p id="visit-message"></p>
+      <p id="visit-message">Welcome! Let us know if you have any questions.</p>
       <button id="close-visit-btn" class="close-visit-btn" type="button" aria-label="Dismiss visitor message">&times;</button>
     </aside>
 
