@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover Santa Fe landmarks, cultural institutions, waterfront parks, and commercial hubs promoted by the Santa Fe Chamber of Commerce.">
+  <meta name="author" content="Kevin Herrera">
+  <meta property="og:title" content="Discover Santa Fe | Santa Fe Chamber of Commerce">
+  <meta property="og:description" content="Explore key landmarks, demographics, and business districts across Santa Fe Capital, Argentina.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kev8bits.github.io/wdd231/chamber/discover.html">
+  <meta property="og:image" content="https://kev8bits.github.io/wdd231/chamber/images/puente-colgante.webp">
+  <title>Discover Santa Fe | Santa Fe Chamber of Commerce</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/base-larger.css">
+  <link rel="stylesheet" href="styles/discover.css">
+  <link rel="stylesheet" href="styles/discover-larger.css">
+  <script type="module" src="scripts/main.mjs"></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="images/logo_header.webp" alt="Santa Fe Chamber of Commerce Logo" width="44" height="44">
+      <span>Santa Fe Chamber</span>
+    </div>
+    <button id="ham-btn" class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false"></button>
+  </header>
+
+  <nav id="nav-bar" class="navigation" aria-label="Primary Navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="join.html">Join</a></li>
+      <li class="current"><a href="discover.html" aria-current="page">Discover</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Discover Santa Fe Capital</h1>
+
+    <aside id="visit-banner" class="visit-banner" aria-live="polite">
+      <p id="visit-message"></p>
+      <button id="close-visit-btn" class="close-visit-btn" type="button" aria-label="Dismiss visitor message">&times;</button>
+    </aside>
+
+    <section class="demographics-strip" aria-labelledby="region-overview-heading">
+      <h2 id="region-overview-heading">Regional Profile &amp; Economic Highlights</h2>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-value">405,000+</span>
+          <span class="stat-label">Metropolitan Population</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">1573</span>
+          <span class="stat-label">Historic River Port Founded</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">3 Universities</span>
+          <span class="stat-label">UNL, UTN &amp; UCSF Talent Hub</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">Bi-Oceanic</span>
+          <span class="stat-label">Central Logistics Corridor</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="discover-section" aria-labelledby="landmarks-heading">
+      <h2 id="landmarks-heading" class="visually-hidden">Points of Interest in Santa Fe</h2>
+      <div id="discover-grid" class="discover-grid"></div>
+    </section>
+
+    <dialog id="place-dialog" class="place-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-header">
+        <h2 id="dialog-title">Landmark Details</h2>
+        <button id="close-dialog-btn" class="close-dialog-btn" type="button" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="dialog-body">
+        <img id="dialog-image" src="images/puente-colgante.webp" alt="" width="300" height="200">
+        <p id="dialog-category" class="dialog-badge"></p>
+        <address id="dialog-address" class="dialog-address"></address>
+        <p id="dialog-description" class="dialog-description"></p>
+        <p id="dialog-highlight" class="dialog-highlight"></p>
+      </div>
+    </dialog>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-info">
+        <p><strong>Santa Fe Chamber of Commerce</strong></p>
+        <p>San Martín 2819, S3000 Santa Fe, Argentina</p>
+        <p>info@santafechamber.org.ar</p>
+        <p>+54 (342) 455-1200</p>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://github.com/kev8bits" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <img src="../images/github.svg" alt="GitHub" width="24" height="24">
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <img src="../images/linkedin.svg" alt="LinkedIn" width="24" height="24">
+        </a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="../images/instagram.svg" alt="Instagram" width="24" height="24">
+        </a>
+      </div>
+
+      <div class="footer-project">
+        <p>WDD 231 Class Project</p>
+        <p>Kevin Herrera</p>
+        <p>&copy; <span id="currentyear"></span> Santa Fe Chamber of Commerce</p>
+        <p id="lastModified"></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

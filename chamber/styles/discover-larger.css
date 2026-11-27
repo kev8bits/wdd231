@@ -1,0 +1,103 @@
+/* ==========================================================================
+   Discover Page Responsive Layouts (Medium & Large Viewports)
+   ========================================================================== */
+
+/* Medium Screens: 641px to 1024px (40.0625rem to 64rem) */
+@media only screen and (min-width: 40.0625rem) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .discover-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "card1 card1"
+      "card2 card3"
+      "card4 card4"
+      "card5 card6"
+      "card7 card8";
+    gap: 1.5rem;
+  }
+
+  /* Featured full-row cards in Medium view use horizontal layout */
+  .discover-card[data-area="card1"],
+  .discover-card[data-area="card4"] {
+    flex-direction: row;
+  }
+
+  .discover-card[data-area="card1"] figure,
+  .discover-card[data-area="card4"] figure {
+    width: 45%;
+    flex-shrink: 0;
+  }
+
+  .discover-card[data-area="card1"] figure img,
+  .discover-card[data-area="card4"] figure img {
+    height: 100%;
+    min-height: 220px;
+  }
+
+  /* Image hover effect enabled only outside mobile view */
+  .discover-card figure img {
+    transition: transform 0.35s ease, filter 0.35s ease;
+  }
+
+  .discover-card figure:hover img {
+    transform: scale(1.05);
+    filter: contrast(1.06) brightness(1.04);
+  }
+}
+
+/* Large Screens: 1025px and above (64.0625rem) */
+@media only screen and (min-width: 64.0625rem) {
+  header,
+  nav,
+  main,
+  footer {
+    max-width: 1280px;
+  }
+
+  .discover-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "card1 card1 card2 card3"
+      "card4 card5 card6 card6"
+      "card7 card7 card8 card8";
+    gap: 1.5rem;
+  }
+
+  /* Reset card1 and card4 to vertical layout inside the 4-column bento grid */
+  .discover-card[data-area="card1"],
+  .discover-card[data-area="card4"] {
+    flex-direction: column;
+  }
+
+  .discover-card[data-area="card1"] figure,
+  .discover-card[data-area="card4"] figure {
+    width: 100%;
+  }
+
+  .discover-card[data-area="card1"] figure img,
+  .discover-card[data-area="card4"] figure img {
+    height: 210px;
+    min-height: 0;
+  }
+
+  /* Wide bottom cards use side-by-side layout on large desktop */
+  .discover-card[data-area="card7"],
+  .discover-card[data-area="card8"] {
+    flex-direction: row;
+  }
+
+  .discover-card[data-area="card7"] figure,
+  .discover-card[data-area="card8"] figure {
+    width: 44%;
+    flex-shrink: 0;
+  }
+
+  .discover-card[data-area="card7"] figure img,
+  .discover-card[data-area="card8"] figure img {
+    height: 100%;
+    min-height: 210px;
+  }
+}

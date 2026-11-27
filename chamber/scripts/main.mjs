@@ -3,6 +3,7 @@
 import ChamberDirectory from './ChamberDirectory.mjs';
 import { NavigationController, FooterController } from './UIControllers.mjs';
 import { initJoinPage, initThankYouPage } from './joinForm.mjs';
+import { initDiscoverPage } from './discover.mjs';
 
 document.addEventListener('DOMContentLoaded', () => {
     new NavigationController('#ham-btn', '#nav-bar');
@@ -21,6 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Only initialize thank you summary if we are on thankyou.html
     if (document.querySelector('#submission-summary')) {
         initThankYouPage();
+    }
+
+    // Only initialize discover page if we are on discover.html
+    if (document.querySelector('#discover-grid')) {
+        initDiscoverPage();
     }
 
     FooterController.populateDates();
